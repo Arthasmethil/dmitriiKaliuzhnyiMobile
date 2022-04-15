@@ -19,9 +19,6 @@ public class webMobileTests extends BaseTest {
         SearchGooglePage searchPage = googlePage.openUrl(properties.getProperty("url"))
                                                 .sendRequest(properties.getProperty("search.epam"));
 
-        //        SearchGooglePage searchPage = googlePage.openUrl(properties.getProperty("url"))
-        //                                                .sendRequest(properties.getProperty("search.epam"));
-
         searchPage.searchTitlesList()
                   .forEach(title -> assertThat(title)
                       .as("Does not contain EPAM")
